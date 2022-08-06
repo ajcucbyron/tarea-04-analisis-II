@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  manejodetiendas-db:
+    image: mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+    container_name: ddd.manejodetiendas-db
+    environment:
+      SA_PASSWORD: "P@ssW0rd!"
+      ACCEPT_EULA: "Y"
+  manejodetiendas-api:
+    build:
+      context: .
+      dockerfile: ./Api/Dockerfile
+    image: ddd.manejodetiendas.api
+    container_name: ddd.manejodetiendas.api
+    ports:
+      - 6200:80
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - "ASPNETCORE_URLS=http://+"
+    restart: on-failure
+    depends_on:
+      - manejodetiendas-db

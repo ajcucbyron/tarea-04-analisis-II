@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Modelos\" />
+    <None Remove="Modelos\Tienda\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Modelos\Producto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modelos\" />
+    <Folder Include="Modelos\Cliente\" />
+    <Folder Include="Modelos\MateriaPrima\" />
+    <Folder Include="Modelos\Producto\" />
+    <Folder Include="Modelos\Proveedor\" />
+    <Folder Include="Modelos\Tienda\" />
+    <Folder Include="Modelos\Empleado\" />
+    <Folder Include="Modelos\Municipio\" />
+    <Folder Include="Modelos\Departamento\" />
+    <Folder Include="Modelos\Vehiculo\" />
+    <Folder Include="Modelos\Pedido\" />
+  </ItemGroup>
+</Project>

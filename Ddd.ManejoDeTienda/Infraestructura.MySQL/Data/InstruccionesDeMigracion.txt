@@ -1,0 +1,2 @@
+﻿-- ejecutar este comando desde el folder del Api
+dotnet ef migrations add Inicial -c appdbcontext -p ../Infraestructura.MySQL/Infraestructura.MySQL.csproj -s Api.csproj -o Datos/Migraciones
